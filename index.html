@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title> Sonya Lao </title>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style2.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i|Raleway" rel="stylesheet">
+</head>
+<body>
+	<?php
+	// define variables and set to empty values
+	$nameErr = $emailErr = "";
+	$name = $email = $comment = "";
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	  if (empty($_POST["name"])) {
+		$nameErr = "Name is required";
+	  } else {
+		$name = test_input($_POST["name"]);
+		// check if name only contains letters and whitespace
+		if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+		  $nameErr = "Only letters and white space allowed"; 
+		}
+	  }
+	  
+	  if (empty($_POST["email"])) {
+		$emailErr = "Email is required";
+	  } else {
+		$email = test_input($_POST["email"]);
+		// check if e-mail address is well-formed
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		  $emailErr = "Invalid email format"; 
+		}
+	  }
+		
+	  if (empty($_POST["comment"])) {
+		$comment = "";
+	  } else {
+		$comment = test_input($_POST["comment"]);
+	  }
+
+	}
+
+	function test_input($data) {
+	  $data = trim($data);
+	  $data = stripslashes($data);
+	  $data = htmlspecialchars($data);
+	  return $data;
+	}
+	?>
+	<div class= 'overlay'>
+		<h1> Sonya Lao </h1>
+		<center><img class="img-circle" src="squareMe.jpg" height="300px" width="300px">
+		<p> I like puns and food (and coding too)</p> </center>
+	</div>
+	<br>
+	<div id = 'About'>
+		<h1> About </h1>
+		<p> I am a graduating high school senior, and will be attending the University of Washington, directly admitted into the Computer Science major, in the fall.  
+			My main interests are in data analysis, machine learning, and artificial intelligence. In high school, I was an 
+			active student in Cisco Networking Academy, and received by Cisco Certified Networking Associate (CCNA) certification in 2016. 
+			
+			
+			</p>
+	</div>
+	<div id = 'resume'>
+		
+		<div id = 'button'>
+		<center><a href="C:\Users\s-laoso\Documents\site\resume.pdf" class="w3-btn w3-black w3-hover-khaki w3-xxxlarge" target= "blank"> VIEW MY RESUME </a> </center>
+		</div>
+	</div>
+	<div id = 'projects'>
+		<h1> Projects </h1>
+		<p> Coming soon!! </p>
+		<a href="#"><p> inTune </p></a>
+	</div>
+	<div id = 'contact'>
+		<h1 style="color:white;"> Contact </h1>
+		
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+		 <input type="text" name="name" placeholder="Name">
+		  <br>
+		  <input type="text" name="email" placeholder="Email">
+		  <br> 
+		  <textarea name="comment" placeholder="Your message here!"></textarea>
+		  <br>
+		  <center><input type="submit" value="Submit" class="submit"> </center>
+		 
+		</form> 
+		<?php
+	echo "<h2>Your Input:</h2>";
+	echo $name;
+	echo "<br>";
+	echo $email;
+	echo "<br>";
+	echo $comment;
+	echo "<br>";
+	echo $gender;
+	?>	
+	</div>
+	<div id = 'social'>
+		<h1> Get Social </h1>
+		<center>
+		<p> I write stuff that looks pretty! </p>
+		<a href="http://www.linkedin.com/in/sonyalao" class="fa fa-linkedin" target = "blank"></a>
+		<a href="http://www.instagram.com/write.side.up" class="fa fa-instagram"></a>
+		<a href="http://www.github.com/sonyalao" class="fa fa-github"></a>
+		</center>
+	</div>
+	<div id= 'credit'>
+	<h5 style="text-align:center; color:white;"> created by Sonya Lao. photos from <a href="http://www.unsplash.com">unsplash</a> </h5>
+	</div>
+
+</body>
+
+</html>
