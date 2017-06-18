@@ -9,47 +9,7 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i|Raleway" rel="stylesheet">
 </head>
 <body>
-	<?php
-	// define variables and set to empty values
-	$nameErr = $emailErr = "";
-	$name = $email = $comment = "";
-
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	  if (empty($_POST["name"])) {
-		$nameErr = "Name is required";
-	  } else {
-		$name = test_input($_POST["name"]);
-		// check if name only contains letters and whitespace
-		if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-		  $nameErr = "Only letters and white space allowed"; 
-		}
-	  }
-	  
-	  if (empty($_POST["email"])) {
-		$emailErr = "Email is required";
-	  } else {
-		$email = test_input($_POST["email"]);
-		// check if e-mail address is well-formed
-		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		  $emailErr = "Invalid email format"; 
-		}
-	  }
-		
-	  if (empty($_POST["comment"])) {
-		$comment = "";
-	  } else {
-		$comment = test_input($_POST["comment"]);
-	  }
-
-	}
-
-	function test_input($data) {
-	  $data = trim($data);
-	  $data = stripslashes($data);
-	  $data = htmlspecialchars($data);
-	  return $data;
-	}
-	?>
+	
 	<div class= 'overlay'>
 		<h1> Sonya Lao </h1>
 		<center><img class="img-circle" src="squareMe.jpg" height="300px" width="300px">
@@ -63,7 +23,7 @@
 			active student in Cisco Networking Academy, and received by Cisco Certified Networking Associate (CCNA) certification in 2016. 
 			
 			
-			</p>
+		</p>
 	</div>
 	<div id = 'resume'>
 		
@@ -89,16 +49,7 @@
 		  <center><input type="submit" value="Submit" class="submit"> </center>
 		 
 		</form> 
-		<?php
-	echo "<h2>Your Input:</h2>";
-	echo $name;
-	echo "<br>";
-	echo $email;
-	echo "<br>";
-	echo $comment;
-	echo "<br>";
-	echo $gender;
-	?>	
+	
 	</div>
 	<div id = 'social'>
 		<h1> Get Social </h1>
