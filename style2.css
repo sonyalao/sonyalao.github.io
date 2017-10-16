@@ -26,9 +26,7 @@ p{
     height: 70%;
     left: 0;
     top: 0;
-	background-image: url('slava-bowman-background2.jpg');
-	background-size:cover;
-    background-color: rgba(255, 255, 255, 0.4);
+	background-color:rgb(233, 244, 208);
 	z-index: -10;
   }
   
@@ -64,7 +62,7 @@ p{
 }
 
 #contact{
-	top: 2300px;
+	top: 2400px;
 	height: 700px;
 	background-image: url('background.jpg');
 	background-size:cover;
