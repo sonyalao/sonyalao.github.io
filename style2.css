@@ -61,6 +61,12 @@ p{
 	z-index: -1;
 }
 
+.projInfo{
+	height: 500px;
+	float:left;
+	padding: 30px 150px;
+}
+
 #contact{
 	top: 2400px;
 	height: 700px;
@@ -96,7 +102,7 @@ a{
 input[type=text]{
 	background-color: rgba(248, 248, 248, 0.5);
 	width: 800px;
-	height: 100px;
+	height: 50px;
 	padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
