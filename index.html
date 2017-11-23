@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="style2.css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i|Raleway" rel="stylesheet">
+<script type = "text/javascript" src="script.js"></script>
 </head>
 <body>
 	
@@ -34,9 +35,37 @@
 	</div>
 	<div id = 'projects'>
 		<h1> Projects </h1>
-		<div class = 'projInfo'><a href="#"><p> inTune </p></a></div>
-		<div class = 'projInfo'><a href="#"><p> Port of Seattle internship </p></a></div>
-		<div class = 'projInfo'><a href="#"><p> Microsoft internship  </p></a></div
+		<button class="accordion">inTune</button>
+		<div class="panel">
+			<p> Project type: Web app <br>
+				Description: A web app that composed a single-voice melody based on your perceived feelings. 
+				The user was prompted to answer the question "How are you feeling today?" and based on their response, our program generated a 
+				"happiness index" utilizing Microsoft Cognitive Services API. The index was mapped to one of 22 musical keys and a melody was composed based on 
+				chord progresions. If the happiness index was high, the piece was more likely to be in a major key. 
+				If the index was low, the piece would be in a minor, and more sad sounding key. <br>
+				Team Members: Sonya Lao, Ian Kinney, Christin Lin, Laurissa Lam <br>
+				Created at the defHacks() hackathon Feb 2017
+			</p>
+		</div>
+		<button class="accordion"> Port of Seattle internship </button>
+		<div class="panel">
+			<p>
+				Project type: Sharepoint site <br>
+				Description: Rebuilt the Port of Seattle IT development team's internal website used for 
+				reporting work status following the agile methodology. Moved the site from Sharepoint 2010 to Sharepoint Online. 
+				Used Javascript and XPath to customize the forms and visual layout of the site. <br>
+				Created at Port of Seattle July 5 2017 - August 25 2017 <br>
+			</p>
+		</div>
+		<button class="accordion"> Microsoft internship  </button>
+		<div class="panel">
+			<p>
+				Project type: Dashboards, Data visualization <br>
+				Description: Added telemetry data points to the SQL Server Management Studio code in C#. Used SQL to aggregate the collected
+				SSMS Telemetry data. Queried the database and created views to create dashboards in Microsoft Power BI. Created 2 sets of dashboards with
+				Business Intelligence information that was presented to higher org members. 
+			</p>
+		</div>
 		<div style = "clear:both;"></div>
 	</div>
 	
@@ -68,6 +97,22 @@
 	<div id= 'credit'>
 	<h5 style="text-align:center; color:white;"> created by Sonya Lao. photos from <a href="http://www.unsplash.com">unsplash</a> </h5>
 	</div>
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
 
 </body>
 
