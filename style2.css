@@ -39,8 +39,8 @@ p{
 }
 
 #About{
-	top: 700px;
-	height: 500px;
+	top: 100vh;
+	height: 100vh;
 	/*background-image: url('background3.jpg');*/
 	background-color: rgb(233, 244, 208);
 	z-index: -1;
