@@ -48,8 +48,8 @@ p{
 }
 
 #resume{
-	top: 1200px;
-	height: 400px;
+	top: 200vh;
+	height: 100vh;
 	background-image: url('background2.jpg');
 	background-size: cover;
 	z-index: -1;
@@ -57,11 +57,20 @@ p{
 }
 
 #projects{
-	top: 1600px;
-	height: 800px;
+	top: 300vh;
+	/*height: 100vh;*/
 	background-color: rgb(232, 226, 225);
 	z-index: -1;
 	padding: 30px 75px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#proj{
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-size: 15px;
 }
 
 button.accordion {
@@ -104,8 +113,8 @@ div.panel {
 }
 
 #contact{
-	top: 2400px;
-	height: 700px;
+	top: 400vh;
+	height: 100vh;
 	background-image: url('background.jpg');
 	background-size:cover;
 	z-index: -1;
