@@ -113,7 +113,7 @@ div.panel {
 }
 
 #contact{
-	top: 400vh;
+	top: 500vh;
 	height: 100vh;
 	background-image: url('background.jpg');
 	background-size:cover;
@@ -122,14 +122,14 @@ div.panel {
 }
 
 #social{
-	top: 3000px;
+	top: 400vh;
 	height: 400px;
 	background-color: rgb(255, 255, 204);
 	z-index: -1;
 }
 
 #credit{
-	top: 3400px;
+	top: 600vh;
 	height: 50px;
 	background-color: rgb(64, 66, 68);
 	z-index: -1;
