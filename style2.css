@@ -123,7 +123,7 @@ div.panel {
 
 #social{
 	top: 400vh;
-	height: 400px;
+	height: 100vh;
 	background-color: rgb(255, 255, 204);
 	z-index: -1;
 }
